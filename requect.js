@@ -52,7 +52,8 @@ function getweather() {
 
                 <div class="box ">
                     <div class="left">
-                        <img src="imgs/wind.png" alt="">
+                    <img src="imgs/pressure.png" alt="">
+
                     </div>
 
                     <div class="right">
