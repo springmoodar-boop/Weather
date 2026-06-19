@@ -642,7 +642,7 @@ footer {
     }
 
     .weather {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         padding: 180px 20px;
     }
 
