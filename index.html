@@ -4,88 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حالة الطقس</title>
+    <title>Weather in the world</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="imgs/wind.png">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
 
     <header>
         <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul id="main-links">
-                <li><a href=""> home</a> </li>
-                <li><a href="">forecast</a></li>
-                <li><a href="">maps</a></li>
-                <li><a href="">about</a></li>
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
             <div class="logo">
-                <h2>
-                    weather
-                </h2>
-                <img src="./imgs/logo.webp" alt="logo">
+                <a href="index.html">
+                    <h2>
+                        weather
+                    </h2>
+                    <img src="./imgs/logo.webp" alt="logo" id="logo">
+                </a>
             </div>
         </nav>
     </header>
     <div class="card">
-        <img src="./imgs/Hero.png" alt="">
+        <img src="./imgs/Hero.webp" alt="">
     </div>
     <section class="main">
         <div class="container">
-            <div class="hero-section">
+            <div class="hero-section" id="hero-section">
                 <h2>stay ahead <span class="break-word"> of the <span class="w">weather</span> </span>
                 </h2>
+                <p>
+                    Get accurate real-time weather updates for any location around the world.
+                </p>
                 <div class="boxsearch">
-                    <input type="text" placeholder="search for a city">
-                    <img src="imgs/search.png" alt="">
+                    <input type="text" placeholder="search for a city" id="inputsearch">
+                    <button id="btnsearch" onclick="getcountry()"><img src="imgs/search.png" alt=""></button>
                 </div>
+
             </div>
-            <div class="weather">
-                <div class="box">
-                    <div class="left">
-                        <img src="imgs/humidity.png" alt="">
-
-                    </div>
-
-                    <div class="right" id="box-one">
-                        <!-- add item box -->
-                    </div>
+            <div class="box-text" id="box-text">
+                <h2>Everything you need, all in one place</h2>
+                <p>Powerful features to keep you informed and prepared every day.</p>
+            </div>
+            <div class="weather" id="weather">
+                <div class="box temp">
+                    <img src="imgs/cloudy-day.png" alt="">
+                    <h2>real-time updates</h2>
+                    <p>Get the most accurate weather information in real time</p>
+                </div>
+                <div class="box temp">
+                    <img src="imgs/pin-50.png" alt="">
+                    <h2>global coverage</h2>
+                    <p>Check weather conditions for any city around the world.</p>
                 </div>
 
-                <div class="box">
-                    <div class="left">
-                        <img src="imgs/wind.png" alt="">
-                    </div>
-
-                    <div class="right" id="box-one">
-                        <!-- add item box -->
-                    </div>
+                <div class="box temp lastbox">
+                    <img src="imgs/increase.png" alt="">
+                    <h2>detailed insights</h2>
+                    <p>Explore wind, humidity,and more.</p>
                 </div>
-
-                <div class="box">
-                    <div class="left">
-                        <img src="imgs/visibility.png" alt="">
-                    </div>
-
-                    <div class="right" id="box-one">
-                        <!-- add item box -->
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="left">
-                        <img src="imgs/pressure.png" alt="">
-                    </div>
-
-                    <div class="right" id="box-one">
-                        <!-- add item box -->
-                    </div>
-                </div>
-
             </div>
         </div>
         </div>
     </section>
+    <footer>
+        <div class="footer-container" id="about">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="./imgs/logo.webp" alt="logo">
+                    <h3>Weather</h3>
+                </div>
+                <p class="footer-desc">
+                    Stay ahead of the weather. Real-time updates for any city around the world, right at your
+                    fingertips.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Weather App. Hameed Zaiter.</p>
+        </div>
+    </footer>
     <script src="main.js"></script>
     <script src="requect.js"></script>
 </body>
