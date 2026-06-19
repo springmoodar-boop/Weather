@@ -29,7 +29,7 @@ function getweather() {
                 hero.innerHTML = `<b>${response.data.name}
             <img src="imgs/location-pin.png" style="width: 40px; height: 40px; object-fit: cover;">
             </b>
-              <h2>${Math.Round(response.data.main.temp)}<sup>o</sup></h2>
+              <h2>${Math.round(response.data.main.temp)}<sup>o</sup></h2>
                 <p>${response.data.weather[0].description}
                 <img src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png" alt="">
                 </p>
