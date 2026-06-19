@@ -34,7 +34,7 @@ function getweather() {
                 <img src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png" alt="">
                 </p>
                 <h3> feels like  ${(response.data.main.feels_like).toFixed(1)}<sup>o</sup></h3>
-             <h4 style="color:#fff;"> last update ${new Date((response.data.sys.sunrise)*1000).getHours()+':'+new Date((response.data.sys.sunrise)*1000).getMinutes()}</h4>
+             <h4 style="color:#fff;"> last update ${new Date((response.data.dt)*1000).getHours()+':'+new Date((response.data.dt)*1000).getMinutes()}</h4>
                 
                 <div class="boxsearch">
                     <input type="text" placeholder="search for a city" id="inputsearch">
